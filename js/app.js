@@ -5,7 +5,7 @@
 */
 
 // STICKY
-$(window).scroll(function() {
+$(window).scroll(function () {
     var scroll = $(window).scrollTop();
 
     if (scroll >= 50) {
@@ -16,7 +16,7 @@ $(window).scroll(function() {
 });
 
 // SmoothLink
-$('.navbar-nav a').on('click', function(event) {
+$('.navbar-nav a').on('click', function (event) {
     var $anchor = $(this);
     $('html, body').stop().animate({
         scrollTop: $($anchor.attr('href')).offset().top - 0
@@ -41,27 +41,47 @@ $("#owl-carousel").owlCarousel({
 
 // Shreenshort
 
+
 var swiper = new Swiper('.swiper-container', {
     effect: 'coverflow',
     loop: true,
     centeredSlides: true,
+
     slidesPerView: 2,
+    // // Responsive breakpoints
+    // breakpoints: {
+    //     // when window width is >= 320px
+    //     320: {
+    //         slidesPerView: 1,
+    //     },
+    //     // when window width is >= 480px
+    //     480: {
+    //         slidesPerView: 1,
+    //     },
+    //     // when window width is >= 640px
+    //     640: {
+    //         slidesPerView: 1,
+    //     },
+    //     767: {
+    //         slidesPerView: 2,
+    //     }
+    // },
     initialSlide: 3,
     keyboardControl: true,
     mousewheelControl: false,
     lazyLoading: true,
-    autoPlay:true,
+    autoplay: true,
     preventClicks: false,
     preventClicksPropagation: false,
     lazyLoadingInPrevNext: true,
-    nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev',
+    // nextButton: '.swiper-button-next',
+    // prevButton: '.swiper-button-prev',
     coverflow: {
         rotate: 0,
         depth: 200,
         modifier: 1,
         slideShadows: false,
-        slidesPerView: 3,
+        slidesPerView: 2,
     }
 });
 
@@ -78,7 +98,7 @@ $('.mfp-image').magnificPopup({
 });
 
 // typed
-$(".element").each(function(){
+$(".element").each(function () {
     var $this = $(this);
     $this.typed({
         strings: $this.attr('data-elements').split(','),
@@ -103,24 +123,24 @@ $('.main-slider').flexslider({
 // Clients Section Owl Carousel
 
 $("#client-logo").owlCarousel({
-    slideSpeed : 200,
-    autoPlay : true,
-    pagination : false,
-    responsiveClass:true,
-    items:3,
- responsive:{
-     0:{
-         items:2,
-     },
-     320: {
-        items:1,
-     },
-     768:{
-         items:3,
-         nav:false
-     },
-     1000:{
-         loop:false
-     }
- }
-    });
+    slideSpeed: 200,
+    autoPlay: true,
+    pagination: false,
+    responsiveClass: true,
+    items: 3,
+    responsive: {
+        0: {
+            items: 2,
+        },
+        320: {
+            items: 1,
+        },
+        768: {
+            items: 3,
+            nav: false
+        },
+        1000: {
+            loop: false
+        }
+    }
+});
