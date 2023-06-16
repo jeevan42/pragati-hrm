@@ -50,6 +50,7 @@ var swiper = new Swiper('.swiper-container', {
     keyboardControl: true,
     mousewheelControl: false,
     lazyLoading: true,
+    autoPlay:true,
     preventClicks: false,
     preventClicksPropagation: false,
     lazyLoadingInPrevNext: true,
